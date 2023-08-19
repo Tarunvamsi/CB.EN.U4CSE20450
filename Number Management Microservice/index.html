@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Management Microservice</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #ff7070;">
+
+    <h1 style="text-align: center; margin-bottom: 20px;">Number Management Microservice</h1>
+    
+    <form method="post" style="text-align: center; margin-bottom: 20px;">
+        <label for="url">Enter URL:</label>
+        <input type="text" name="url">
+        <button type="submit">Add URL</button>
+    </form>
+    
+    {% if input_urls %}
+    <h2>Input URLs:</h2>
+    <ul style="list-style-type: none; padding: 0;">
+        {% for url in input_urls %}
+        <li style="margin-bottom: 5px;">{{ url }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    
+    {% if numbers %}
+    <h2>Merged and Sorted Numbers:</h2>
+    <ul style="list-style-type: none; padding: 0;">
+        {% for number in numbers %}
+        <li style="margin-bottom: 5px;">{{ number }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    
+</body>
+</html>
